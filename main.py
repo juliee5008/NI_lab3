@@ -60,7 +60,7 @@ class Tenant(BaseModel):
     
     @staticmethod
     def display(self):
-        print(f"Name: {self.name}")
+        print(self.name)
     
 
 class Transfer(BaseModel):
