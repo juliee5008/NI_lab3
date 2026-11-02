@@ -58,8 +58,10 @@ class Tenant(BaseModel):
         assert isinstance(data, dict), "Expected a dictionary of tenants"
         return {key: Tenant(**tenant) for key, tenant in data.items()}
     
+    @staticmethod
     def display(self):
-        print(self.name)
+        print(f"Name: {self.name}")
+    
 
 class Transfer(BaseModel):
     amount_pln: float
