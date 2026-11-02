@@ -31,6 +31,15 @@ class Apartment(BaseModel):
         assert isinstance(data, dict), "Expected a dictionary of apartments"
         return {key: Apartment(**apartment) for key, apartment in data.items()}
 
+
+class ApartmentSettlement(Basemodel):
+    apartment: Apartment
+    month: int
+    year: int
+    bill_sum: float
+    rent_sum: float
+    left: float
+
     
 class Tenant(BaseModel):
     name: str
