@@ -33,12 +33,12 @@ class Apartment(BaseModel):
 
 
 class ApartmentSettlement(Basemodel):
-    mieszkanie: Apartment
-    miesiac: int
-    rok: int
-    suma_rachunkow: float
-    suma_czynszow: float
-    pozostalo: float
+    apartment: Apartment
+    month: int
+    year: int
+    bill_sum: float
+    rent_sum: float
+    left: float
 
     
 class Tenant(BaseModel):
